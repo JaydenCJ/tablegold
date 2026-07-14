@@ -9,7 +9,7 @@ description = "Golden-file testing for CSV and tabular data: numeric tolerance, 
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "JaydenCJ" }]
+authors = [{ name = "JaydenCJ", email = "aisingioro.kiyon@gmail.com" }]
 keywords = ["golden-files", "snapshot-testing", "csv", "data-testing", "tolerance", "diff", "pytest"]
 classifiers = [
     "Development Status :: 3 - Alpha",
