@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tablegold"
+version = "0.1.0"
+description = "Golden-file testing for CSV and tabular data: numeric tolerance, column order, dtype checks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "JaydenCJ" }]
+keywords = ["golden-files", "snapshot-testing", "csv", "data-testing", "tolerance", "diff", "pytest"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Framework :: Pytest",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+tablegold = "tablegold.cli:main"
+
+[project.entry-points.pytest11]
+tablegold = "tablegold.pytest_plugin"
+
+[project.urls]
+Homepage = "https://github.com/JaydenCJ/tablegold"
+Repository = "https://github.com/JaydenCJ/tablegold"
+Issues = "https://github.com/JaydenCJ/tablegold/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "examples"]
+addopts = "-q"
